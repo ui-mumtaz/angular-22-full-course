@@ -1,0 +1,6 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-brand: #e23d5b;   /* → bg-brand, text-brand, border-brand, decoration-brand, … */
+  --color-ink: #0d1726;     /* → bg-ink, text-ink, … */
+}
