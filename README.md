@@ -17,6 +17,7 @@ Brand colours live in `src/tailwind.css` (`@theme`: `--color-brand`, `--color-in
 
 | Lesson | Video | Topic | Tag |
 |---|---|---|---|
+| 9.1 | #42 | Routing basics: pages, links and the Back button | `L9.1-end` |
 
 ## Tools
 
