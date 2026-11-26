@@ -13,6 +13,7 @@ export const routes: Routes = [
     resolve: { product: productResolver },                     // runs once for the layout + all tabs
     children: PRODUCT_ROUTES,                                  // titles now live on the children
   },
+  { path: 'checkout', loadComponent: () => import('./forms/checkout-form'), title: 'My Shop – Checkout' },
   { path: 'contact', loadComponent: () => import('./forms/contact-form'), title: 'My Shop – Contact us' },
   { path: 'login', loadComponent: () => import('./login-page'), title: 'Login' },
   { path: 'about', loadComponent: () => import('./about-page'), canActivate: [authGuard], title: 'My Shop – About us' },   // logged-in only
