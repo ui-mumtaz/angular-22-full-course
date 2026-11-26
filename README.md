@@ -23,6 +23,7 @@ Brand colours live in `src/tailwind.css` (`@theme`: `--color-brand`, `--color-in
 | 9.4 | #45 | Route guards: `canActivate`, `canMatch`, login with `returnUrl` | `L9.4-end` |
 | 9.5 | #46 | Route resolvers: `ResolveFn`, `RedirectCommand` and title resolvers | `L9.5-end` |
 | 9.6 | #47 | Nested routes: a product layout with Overview, Reviews and Specs tabs | `L9.6-end` |
+| 10.1 | #48 | Template-driven forms: `ngModel` with signals, validation and `ngSubmit` | `L10.1-end` |
 
 ## Tools
 

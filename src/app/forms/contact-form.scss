@@ -1,0 +1,5 @@
+@reference '../../tailwind.css';
+
+input.ng-invalid.ng-touched {
+  @apply border-red-500;
+}
