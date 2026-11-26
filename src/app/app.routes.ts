@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
 import { HomePage, NotFoundPage, ProductsPage } from './pages';      // ⚠ no static import of AboutPage
-import { productResolver, productTitleResolver } from './product-resolvers';
+import { productResolver } from './product-resolvers';
+import { PRODUCT_ROUTES } from './product/product.routes';
 import { adminMatchGuard, authGuard } from './auth';
 
 export const routes: Routes = [
@@ -8,9 +9,9 @@ export const routes: Routes = [
   { path: 'products', component: ProductsPage, title: 'My Shop – Products' },
   {
     path: 'products/:id',
-    loadComponent: () => import('./product-page'),
-    resolve: { product: productResolver },   // key "product" → input "product"
-    title: productTitleResolver,             // the browser tab title, resolved too
+    loadComponent: () => import('./product/product-layout'),   // was: ./product-page (Lesson 46)
+    resolve: { product: productResolver },                     // runs once for the layout + all tabs
+    children: PRODUCT_ROUTES,                                  // titles now live on the children
   },
   { path: 'login', loadComponent: () => import('./login-page'), title: 'Login' },
   { path: 'about', loadComponent: () => import('./about-page'), canActivate: [authGuard], title: 'My Shop – About us' },   // logged-in only
