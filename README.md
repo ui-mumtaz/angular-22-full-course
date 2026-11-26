@@ -26,6 +26,7 @@ Brand colours live in `src/tailwind.css` (`@theme`: `--color-brand`, `--color-in
 | 10.1 | #48 | Template-driven forms: `ngModel` with signals, validation and `ngSubmit` | `L10.1-end` |
 | 10.2 | #49 | Reactive forms: `FormBuilder`, typed forms and `getRawValue` | `L10.2-end` |
 | 10.3 | #50 | Signal Forms: `form()`, `[formField]` and `submit` | `L10.3-end` |
+| 10.4 | #51 | Validation: custom, cross-field, conditional and server rules | `L10.4-end` |
 
 ## Tools
 
