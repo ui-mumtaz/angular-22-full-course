@@ -27,6 +27,7 @@ Brand colours live in `src/tailwind.css` (`@theme`: `--color-brand`, `--color-in
 | 10.2 | #49 | Reactive forms: `FormBuilder`, typed forms and `getRawValue` | `L10.2-end` |
 | 10.3 | #50 | Signal Forms: `form()`, `[formField]` and `submit` | `L10.3-end` |
 | 10.4 | #51 | Validation: custom, cross-field, conditional and server rules | `L10.4-end` |
+| 10.5 | #52 | Dynamic forms: add and remove rows, fields from config | `L10.5-end` |
 
 ## Tools
 
