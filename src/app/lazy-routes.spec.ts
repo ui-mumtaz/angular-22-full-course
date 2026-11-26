@@ -2,9 +2,13 @@ import { TestBed } from '@angular/core/testing';
 import { provideRouter } from '@angular/router';
 import { RouterTestingHarness } from '@angular/router/testing';
 import { routes } from './app.routes';
+import { AuthService } from './auth';
 
 describe('lazy routes', () => {
-  beforeEach(() => TestBed.configureTestingModule({ providers: [provideRouter(routes)] }));
+  beforeEach(() => {
+    TestBed.configureTestingModule({ providers: [provideRouter(routes)] });
+    TestBed.inject(AuthService).login('Mumtaz', 'admin');   // About and Admin are guarded since Lesson 45
+  });
 
   it('loads the About page with loadComponent', async () => {
     const harness = await RouterTestingHarness.create();
