@@ -1,12 +1,8 @@
 import { inject } from '@angular/core';
 import { RedirectCommand, ResolveFn, Router } from '@angular/router';
+import { Product } from './product/product';
 
-export interface Product {
-  id: number;
-  title: string;
-  price: number;
-  description: string;
-}
+export type { Product } from './product/product';
 
 export const productResolver: ResolveFn<Product | RedirectCommand> = async (route) => {
   const router = inject(Router);
