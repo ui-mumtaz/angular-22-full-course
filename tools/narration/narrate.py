@@ -83,7 +83,7 @@ for pat, rep in [(r"(\*?)\b[Nn]g([A-Z][A-Za-z]*)", lambda m: ("star " if m.group
                  (r"(?<![\d,.])999(?!\d|,\d)", "nine ninety-nine"), (r"(\d+)%", r"\1 percent"),
                  (r"(?<![\w.])\./", "dot slash "), (r"(?<!\w)\.then\b", "dot then"), (r"\b521\b", "five twenty-one"), (r"\b3418\b", "three thousand four hundred eighteen"), (r"\bSDKs\b", "S D Ks"),
                  (r"(?<![\w./])/(?=[a-z])", "slash "), (r"(?<![\w./])/(?=[,.:]|\s|$)", "slash"), (r"\b404\b", "four oh four"), (r"\bPreloadAllModules\b", "Preload All Modules"),
-                 (r"\b(CanActivate|CanMatch|CanDeactivate|Resolve)Fn\b", lambda m: re.sub(r"(?<=[a-z])(?=[A-Z])", " ", m.group(1)) + " F N"), (r"\bUrlTree\b", "Url Tree"),
+                 (r"\b(CanActivate|CanMatch|CanDeactivate|Resolve)Fn\b", lambda m: re.sub(r"(?<=[a-z])(?=[A-Z])", " ", m.group(1)) + " F N"), (r"\bUrlTree\b", "U R L Tree"), (r"\bcreateUrlTree\b", "create U R L Tree"), (r"(?<=\w)\.url\b", " dot U R L"), (r"(?<=[a-z ])Url\b", " U R L"), (r"\bUrl\b", "U R L"),
                  (r"\b99999\b", "nine nine nine nine nine"), (r"\bRedirectCommand\b", "Redirect Command"), (r"\btext-3xl\b", "text three X L")]:
     text = re.sub(pat, rep, text)
 text = re.sub(r"\b[a-z]+(?:[A-Z][a-z]+){1,}\b", lambda m: re.sub(r"(?<=[a-z])(?=[A-Z])", " ", m.group(0)), text)
