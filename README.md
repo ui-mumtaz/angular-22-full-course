@@ -25,6 +25,7 @@ Brand colours live in `src/tailwind.css` (`@theme`: `--color-brand`, `--color-in
 | 9.6 | #47 | Nested routes: a product layout with Overview, Reviews and Specs tabs | `L9.6-end` |
 | 10.1 | #48 | Template-driven forms: `ngModel` with signals, validation and `ngSubmit` | `L10.1-end` |
 | 10.2 | #49 | Reactive forms: `FormBuilder`, typed forms and `getRawValue` | `L10.2-end` |
+| 10.3 | #50 | Signal Forms: `form()`, `[formField]` and `submit` | `L10.3-end` |
 
 ## Tools
 
