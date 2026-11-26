@@ -18,6 +18,7 @@ Brand colours live in `src/tailwind.css` (`@theme`: `--color-brand`, `--color-in
 | Lesson | Video | Topic | Tag |
 |---|---|---|---|
 | 9.1 | #42 | Routing basics: pages, links and the Back button | `L9.1-end` |
+| 9.2 | #43 | Route parameters: `/products/:id`, query params and `Router.navigate` | `L9.2-end` |
 
 ## Tools
 
