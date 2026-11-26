@@ -12,6 +12,8 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
         routerLinkActive="font-semibold underline decoration-brand decoration-2 underline-offset-8">Products</a>
       <a class="px-1 text-slate-700 hover:text-slate-900" routerLink="/about"
         routerLinkActive="font-semibold underline decoration-brand decoration-2 underline-offset-8">About</a>
+      <a class="px-1 text-slate-700 hover:text-slate-900" routerLink="/contact"
+        routerLinkActive="font-semibold underline decoration-brand decoration-2 underline-offset-8">Contact</a>
       <a class="px-1 text-slate-700 hover:text-slate-900" routerLink="/admin"
         routerLinkActive="font-semibold underline decoration-brand decoration-2 underline-offset-8">Admin</a>
     </nav>
