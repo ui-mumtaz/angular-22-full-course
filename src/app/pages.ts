@@ -1,7 +1,18 @@
 import { Component, input } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
-@Component({ selector: 'app-home-page', template: `<h2 class="text-xl font-semibold">Home</h2><p class="mt-2 text-slate-600">Welcome to My Shop.</p>` })
+@Component({
+  selector: 'app-home-page',
+  imports: [RouterLink],
+  template: `
+    <h2 class="text-xl font-semibold">Home</h2>
+    <p class="mt-2 text-slate-600">Welcome to My Shop.</p>
+    <div class="mt-4 flex gap-4">
+      <a class="text-blue-600 hover:underline" routerLink="/products/5">Product 5</a>
+      <a class="text-blue-600 hover:underline" routerLink="/products/6">Product 6</a>
+    </div>
+  `,
+})
 export class HomePage {}
 
 @Component({

@@ -79,6 +79,7 @@ for pat, rep in [(r"(\*?)\b[Nn]g([A-Z][A-Za-z]*)", lambda m: ("star " if m.group
                  (r"(?<![\w-])-(?=[A-Za-z])", "dash "), (r"\bv(\d{2})\b", r"v \1"), (r"\bsudo\b", "sue-doo"), (r"\.ps1\b", " dot P S 1"), (r"slash cli\b", "slash C L I"),
                  (r"Signal<(\w+)\[\]>", r"Signal of \1 array"), (r"Signal<(\w+)>", r"Signal of \1"), (r"\s?×\s?", " times "), (r"♥", " heart "), (r"\b2897\b", "two thousand eight hundred ninety-seven"), (r"(?<![\d,.])1299(?![\d,])", "twelve ninety-nine"),
                  (r"(?<![\w&])#(\d+)\b", r"number \1"), (r"(?<!\w)_([A-Z]\w*)", r"underscore \1"), (r"\b10:45\b", "ten forty-five"),
+                 (r"\b([A-Z]+)_ROUTES\b", lambda m: m.group(1).lower() + " routes"), (r"\.\./", "dot dot slash "), (r"\bSKU\b", "S K U"),
                  (r"\b[A-Z][A-Z0-9]*(?:_[A-Z0-9]+)+\b", lambda m: m.group(0).replace("_", " ")), (r"dummy JSON\.com", "dummy JSON dot com"), (r"\bmyshop\b", "my shop"), (r"\bv1\b", "V one"),
                  (r"(?<![\d,.])999(?!\d|,\d)", "nine ninety-nine"), (r"(\d+)%", r"\1 percent"),
                  (r"(?<![\w.])\./", "dot slash "), (r"(?<!\w)\.then\b", "dot then"), (r"\b521\b", "five twenty-one"), (r"\b3418\b", "three thousand four hundred eighteen"), (r"\bSDKs\b", "S D Ks"),

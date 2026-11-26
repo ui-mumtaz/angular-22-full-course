@@ -21,6 +21,7 @@ Brand colours live in `src/tailwind.css` (`@theme`: `--color-brand`, `--color-in
 | 9.2 | #43 | Route parameters: `/products/:id`, query params and `Router.navigate` | `L9.2-end` |
 | 9.3 | #44 | Lazy loading routes: `loadComponent`, `loadChildren` and preloading | `L9.3-end` |
 | 9.4 | #45 | Route guards: `canActivate`, `canMatch`, login with `returnUrl` | `L9.4-end` |
+| 9.5 | #46 | Route resolvers: `ResolveFn`, `RedirectCommand` and title resolvers | `L9.5-end` |
 
 ## Tools
 
