@@ -14,6 +14,7 @@ export const routes: Routes = [
     children: PRODUCT_ROUTES,                                  // titles now live on the children
   },
   { path: 'checkout', loadComponent: () => import('./forms/checkout-form'), title: 'My Shop – Checkout' },
+  { path: 'signup', loadComponent: () => import('./forms/signup-form'), title: 'My Shop – Sign up' },
   { path: 'contact', loadComponent: () => import('./forms/contact-form'), title: 'My Shop – Contact us' },
   { path: 'login', loadComponent: () => import('./login-page'), title: 'Login' },
   { path: 'about', loadComponent: () => import('./about-page'), canActivate: [authGuard], title: 'My Shop – About us' },   // logged-in only
