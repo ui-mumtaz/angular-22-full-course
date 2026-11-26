@@ -38,8 +38,8 @@ def speakable(code: str) -> str:
         return "an empty string"
     s = re.sub(r'<a\s+routerLink="([^"]+)"[^>]*>([^<]+)</a>', r" an a tag with routerLink equals \1, and the text \2 ", s)   # <a routerLink="/products">Products</a>
     s = re.sub(r"/:(\w+)", r"/ colon \1", s)                                   # products/:id → products slash colon id
-    s = re.sub(r"(?<=\w)\?(\w+)=([\w-]+)", r" question mark \1 equals \2", s)   # /products/2?tab=reviews
-    s = re.sub(r"(?<![\w?])\?(\w+)=([\w-]+)", r" question mark \1 equals \2", s)  # ?sort=price
+    s = re.sub(r"(?<=\w)\?(\w+)=([\w/-]+)", r" question mark \1 equals \2", s)   # /products/2?tab=reviews, /login?returnUrl=/about
+    s = re.sub(r"(?<![\w?])\?(\w+)=([\w/-]+)", r" question mark \1 equals \2", s)  # ?sort=price
     s = re.sub(r"(?<![\w?)])\?(?=[a-z])", " question mark ", s)                 # ?tab
     s = re.sub(r"\[\((\w+)\)\]=\"([^\"]+)\"", r" \1 equals \2 ", s)   # [(value)]="qty" → value equals qty
     s = re.sub(r"\[(\w+)\]=\"([^\"]+)\"", r" \1 equals \2 ", s)   # [product]="p" → product equals p
@@ -82,7 +82,8 @@ for pat, rep in [(r"(\*?)\b[Nn]g([A-Z][A-Za-z]*)", lambda m: ("star " if m.group
                  (r"\b[A-Z][A-Z0-9]*(?:_[A-Z0-9]+)+\b", lambda m: m.group(0).replace("_", " ")), (r"dummy JSON\.com", "dummy JSON dot com"), (r"\bmyshop\b", "my shop"), (r"\bv1\b", "V one"),
                  (r"(?<![\d,.])999(?!\d|,\d)", "nine ninety-nine"), (r"(\d+)%", r"\1 percent"),
                  (r"(?<![\w.])\./", "dot slash "), (r"(?<!\w)\.then\b", "dot then"), (r"\b521\b", "five twenty-one"), (r"\b3418\b", "three thousand four hundred eighteen"), (r"\bSDKs\b", "S D Ks"),
-                 (r"(?<![\w./])/(?=[a-z])", "slash "), (r"(?<![\w./])/(?=[,.:]|\s|$)", "slash"), (r"\b404\b", "four oh four"), (r"\bPreloadAllModules\b", "Preload All Modules")]:
+                 (r"(?<![\w./])/(?=[a-z])", "slash "), (r"(?<![\w./])/(?=[,.:]|\s|$)", "slash"), (r"\b404\b", "four oh four"), (r"\bPreloadAllModules\b", "Preload All Modules"),
+                 (r"\b(CanActivate|CanMatch|CanDeactivate|Resolve)Fn\b", lambda m: re.sub(r"(?<=[a-z])(?=[A-Z])", " ", m.group(1)) + " F N"), (r"\bUrlTree\b", "Url Tree")]:
     text = re.sub(pat, rep, text)
 text = re.sub(r"\b[a-z]+(?:[A-Z][a-z]+){1,}\b", lambda m: re.sub(r"(?<=[a-z])(?=[A-Z])", " ", m.group(0)), text)
 paras = [re.sub(r"\s+", " ", p).strip() for p in re.split(r"\n\s*\n", text) if p.strip()]
