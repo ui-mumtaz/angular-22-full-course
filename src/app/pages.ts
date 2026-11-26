@@ -20,9 +20,6 @@ export class ProductsPage {
   readonly from = input<string>();     // /products?from=2 → "2"
 }
 
-@Component({ selector: 'app-about-page', template: `<h2 class="text-xl font-semibold">About us</h2>` })
-export class AboutPage {}
-
 @Component({
   selector: 'app-not-found-page',
   imports: [RouterLink],
